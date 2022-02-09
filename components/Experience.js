@@ -43,9 +43,9 @@ const Experience = () => {
         </div>
         <p className={'experienceBlurb'}>
           I champion writing lean, clean and practical code. Readability is key.
-          I love testing new version, features and frameworks. I spend dedicated
-          time every week reading coding and programming news and well as
-          version release and documentation.
+          I love testing new versions, features and frameworks. I spend
+          dedicated time every week reading coding and programming news and well
+          as version release and documentation.
         </p>
       </div>
     </section>

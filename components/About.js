@@ -14,10 +14,8 @@ const About = () => {
               </span>
             </div>
             <p className={'blurb'}>
-              {`I'm a software developer & coding nerd. Based in the New York
-                Metropolitan area. My interests include React.js, Next,js, JAM
-                Stack applications, e-commerce, bespoke business apps &
-                solutions, and Food-Tech. My mission is to make bespoke
+              {`I'm a software developer & coding nerd. My interests include E-commerce, bespoke business apps &
+                solutions, JAM Stack applications, and Food-Tech. My mission is to make bespoke
                 technology and solutions more accessible for all.`}
             </p>
           </div>
