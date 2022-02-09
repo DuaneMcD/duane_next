@@ -27,7 +27,7 @@ const Portfolio = () => {
               href='https://www.github.com/duanemcd'
               target='_blank'
               rel='noreferrer'>
-              my github
+              {' my github '}
             </a>
             for full repositories and code details.
           </p>

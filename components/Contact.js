@@ -1,4 +1,10 @@
+import { useState } from 'react';
+import FormInput from './FormInput';
+
 const Contact = () => {
+  function formSubmit(values) {
+    console.log(values);
+  }
   return (
     <section id='contact' className={'page-section secPad'}>
       <div className={'container contact-container'}>
@@ -6,19 +12,19 @@ const Contact = () => {
           <div className={'heading'}>
             <h2 className={'contactHeader'}>{`Let's Work Together`}</h2>
             <p className={'contactBlurb'}>
-              {`I'd love to hear about your next project! Please fill this form
+              {`I'd love to hear about your next project! Please use this form
               and I'll be in touch shortly.`}
             </p>
           </div>
         </div>
         <div className={'contactForm'}>
-          <form name='sentMessage' id='contactForm' noValidate>
+          <form name='sentMessage' id='contactForm' onSubmit={formSubmit()}>
             <div className={'control-group'}>
               <div className={'controls'}>
                 <input
                   type='text'
                   className={'form-control'}
-                  placeholder='Full Name'
+                  placeholder='Name'
                   id='name'
                   required
                   data-validation-required-message='Please enter your name'
