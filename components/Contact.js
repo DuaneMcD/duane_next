@@ -1,9 +1,58 @@
 import { useState } from 'react';
 import FormInput from './FormInput';
+import axios from 'axios';
 
 const Contact = () => {
-  function formSubmit(values) {
+  const [values, setValues] = useState({
+    user: '',
+    email: '',
+    message: '',
+  });
+
+  const inputs = [
+    {
+      id: 1,
+      name: 'user',
+      type: 'text',
+      placeholder: 'Name',
+    },
+    {
+      id: 2,
+      name: 'email',
+      type: 'email',
+      placeholder: 'Email',
+    },
+    {
+      id: 3,
+      name: 'message',
+      type: 'text',
+      placeholder: 'Message',
+    },
+  ];
+
+  async function handleSubmit(e) {
+    e.preventDefault();
     console.log(values);
+
+    let config = {
+      method: 'post',
+      url: `${process.env.NEXT_PUBLIC_API_URL}/api/contact`,
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      data: values,
+    };
+
+    try {
+      const response = await axios(config);
+      console.log(response);
+    } catch (err) {
+      console.error(err);
+    }
+  }
+
+  function handleChange(e) {
+    setValues({ ...values, [e.target.name]: e.target.value });
   }
   return (
     <section id='contact' className={'page-section secPad'}>
@@ -18,50 +67,15 @@ const Contact = () => {
           </div>
         </div>
         <div className={'contactForm'}>
-          <form name='sentMessage' id='contactForm' onSubmit={formSubmit()}>
-            <div className={'control-group'}>
-              <div className={'controls'}>
-                <input
-                  type='text'
-                  className={'form-control'}
-                  placeholder='Name'
-                  id='name'
-                  required
-                  data-validation-required-message='Please enter your name'
-                />
-                <p className={'help-block'}></p>
-              </div>
-            </div>
-            <div className={'control-group'}>
-              <div className={'controls'}>
-                <input
-                  type='email'
-                  className={'form-control'}
-                  placeholder='Email'
-                  id='email'
-                  required
-                  data-validation-required-message='Please enter your email'
-                />
-              </div>
-            </div>
-            <div className={'control-group'}>
-              <div className={'controls'}>
-                <textarea
-                  rows='10'
-                  cols='100'
-                  className={'form-control'}
-                  placeholder='Message'
-                  id='message'
-                  required
-                  data-validation-required-message='Please enter your message'
-                  minLength='5'
-                  data-validation-minlength-message='Min 5 characters'
-                  maxLength='999'
-                  // style='resize: none'
-                ></textarea>
-              </div>
-            </div>
-            <div id='success'></div>
+          <form name='sentMessage' id='contactForm' onSubmit={handleSubmit}>
+            {inputs.map(input => (
+              <FormInput
+                key={input.id}
+                {...input}
+                value={values[input.name]}
+                onChange={handleChange}
+              />
+            ))}
             <button type='submit' className={'btn btn-primary pull-right'}>
               Send
             </button>
