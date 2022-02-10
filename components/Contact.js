@@ -36,7 +36,7 @@ const Contact = () => {
 
     let config = {
       method: 'post',
-      url: `${process.env.NEXT_PUBLIC_API_URL}/api/contact`,
+      url: `http://localhost:3000/api/contact`,
       headers: {
         'Content-Type': 'application/json',
       },
