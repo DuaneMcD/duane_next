@@ -9,6 +9,14 @@ const Contact = () => {
     message: '',
   });
 
+  const resetForm = () => {
+    setValues({
+      user: '',
+      email: '',
+      message: '',
+    });
+  };
+
   const inputs = [
     {
       id: 1,
@@ -32,11 +40,10 @@ const Contact = () => {
 
   async function handleSubmit(e) {
     e.preventDefault();
-    console.log(values);
 
     let config = {
       method: 'post',
-      url: `http://localhost:3000/api/contact`,
+      url: `${process.env.NEXT_PUBLIC_CONTACT}`,
       headers: {
         'Content-Type': 'application/json',
       },
@@ -45,7 +52,8 @@ const Contact = () => {
 
     try {
       const response = await axios(config);
-      console.log(response);
+      console.log('Message Sent!');
+      resetForm();
     } catch (err) {
       console.error(err);
     }

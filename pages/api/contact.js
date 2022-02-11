@@ -1,9 +1,38 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-// import nodemailer from 'nodemailer';
+import nodemailer from 'nodemailer';
 
-const handleContact = (req, res) => {
-  console.log(req.body);
-  res.status(200).json('req.body');
-};
+async function handleContact(req, res) {
+  const { user, email, message } = req.body;
+
+  // create reusable transporter object using the default SMTP transport
+  const transporter = nodemailer.createTransport({
+    host: 'mail.duanemcdonald.com',
+    port: 465,
+    secure: true, // true for 465, false for other ports
+    auth: {
+      user: process.env.USER, // generated ethereal user
+      pass: process.env.PASS, // generated ethereal password
+    },
+  });
+
+  try {
+    // send mail with defined transport object
+    const info = await transporter.sendMail({
+      from: `${email}`, // sender address
+      to: 'mcdonald.duane13@gmail.com', // list of receivers
+      subject: 'Message from DuaneMcDonald.com', // Subject line
+      html: `<div>${user}</div> 
+      <p> Has submitted a new message: </p> 
+      <p> ${message} </p> <br>
+      
+      `,
+    });
+
+    console.log('Message sent: %s', info.messageId);
+    res.status(200).end();
+  } catch (err) {
+    console.error(err);
+  }
+}
 
 export default handleContact;
