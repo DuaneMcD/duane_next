@@ -1,4 +1,3 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import nodemailer from 'nodemailer';
 
 async function handleContact(req, res) {
@@ -10,8 +9,8 @@ async function handleContact(req, res) {
     port: 465,
     secure: true, // true for 465, false for other ports
     auth: {
-      user: process.env.USER, // generated ethereal user
-      pass: process.env.PASS, // generated ethereal password
+      user: process.env.USER,
+      pass: process.env.PASS,
     },
   });
 
@@ -19,7 +18,7 @@ async function handleContact(req, res) {
     // send mail with defined transport object
     const info = await transporter.sendMail({
       from: `${email}`, // sender address
-      to: 'mcdonald.duane13@gmail.com', // list of receivers
+      to: 'mcdonald.duane13@gmail.com', // receiver
       subject: 'Message from DuaneMcDonald.com', // Subject line
       html: `<div>${user}</div> 
       <p> Has submitted a new message: </p> 
