@@ -12,9 +12,6 @@ export const Navbar = () => {
           data-toggle='collapse'
           data-target='#main-nav'>
           <span className={'sr-only'}>Toggle navigation</span>
-          {/* <span className={'icon-bar'}></span>
-          <span className={'icon-bar'}></span>
-          <span className={'icon-bar'}></span> */}
         </button>
         <div className={'social'}>
           <a

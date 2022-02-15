@@ -3,7 +3,7 @@ import newyork from '../components/images/nyc_sky.jpg';
 
 const Home = () => {
   return (
-    <section id='home'>
+    <section id='home' className={'home'}>
       <div className={'banner-container'}>
         {/* <Image
           className={'heroImage'}

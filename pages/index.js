@@ -2,6 +2,7 @@ import { useState, useRef, useEffect } from 'react';
 import Head from 'next/head';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
+import Observer from '../components/Observer';
 import Navbar from '../components/Navbar';
 import Home from '../components/Home';
 import About from '../components/About';
@@ -12,34 +13,6 @@ import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 
 export default function Index() {
-  const containerRef = useRef(null);
-  const [solidBg, setSolidBg] = useState(false);
-  const [active, setActive] = useState(false);
-
-  const callbackFunction = entries => {
-    const [entry] = entries;
-    setActive(entry.isIntersecting);
-  };
-
-  const options = {
-    root: null,
-    rootMargin: '20px',
-    threshold: 0.1,
-  };
-
-  useEffect(
-    () => {
-      const observer = new IntersectionObserver(callbackFunction, options);
-      if (containerRef.current) observer.observe(containerRef.current);
-
-      return () => {
-        if (containerRef.current) observer.unobserve(containerRef.current);
-      };
-    },
-    containerRef,
-    options
-  );
-
   return (
     <>
       {/* <div className={'container'}> */}

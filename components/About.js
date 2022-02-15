@@ -3,7 +3,7 @@ import duane from '../components/images/duane_sunglasses.jpg';
 const About = () => {
   return (
     <>
-      <section id='about'>
+      <section id='about' className={'about'}>
         <section className={'introText'}>
           <div className={'container'}>
             <div className={'heroText'}>
