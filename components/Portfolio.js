@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 import Chirpr from './images/portfolio/chirpr.png';
 import Swapi from './images/portfolio/swapi.png';
 import Calculator from './images/portfolio/calculator.png';
@@ -8,8 +10,12 @@ import Todo from './images/portfolio/todo-app.png';
 import RPSGame from './images/portfolio/rps-game.png';
 import ShaunShines from './images/portfolio/shaun-shines-next.png';
 import Project from './Project';
+import Filter from './Filter';
 
 const Portfolio = () => {
+  const [galleryFilter, setGalleryFilter] = useState('all');
+  const [displayedProjects, setDisplayedProjects] = useState([]);
+
   const projects = [
     {
       id: 1,
@@ -126,59 +132,24 @@ const Portfolio = () => {
             for full repositories and code details.
           </p>
         </div>
-        <div className={'row'}>
-          <nav id='filter' className={'col-md-12'}>
-            <ul>
-              <li>
-                <a
-                  href='#'
-                  className={'current btn-theme btn-small'}
-                  data-filter='*'>
-                  All
-                </a>
-              </li>
-              <li>
-                <a
-                  href='#'
-                  className={'btn-theme btn-small'}
-                  data-filter='.common-js'>
-                  Common Javascript
-                </a>
-              </li>
-              <li>
-                <a
-                  href='#'
-                  className={'btn-theme btn-small'}
-                  data-filter='.react'>
-                  React
-                </a>
-              </li>
-              <li>
-                <a
-                  href='#'
-                  className={'btn-theme btn-small'}
-                  data-filter='.next-js'>
-                  Next.js
-                </a>
-              </li>
-            </ul>
-          </nav>
-          <div className='portfolio-gallery'>
-            {projects.map(project => (
-              <Project key={project.id} {...project} />
-            ))}
-          </div>
+        <Filter
+          projects={projects}
+          setDisplayedProjects={setDisplayedProjects}
+          galleryFilter={galleryFilter}
+          setGalleryFilter={setGalleryFilter}
+        />
+        <div className='portfolio-gallery'>
+          {displayedProjects.map(project => (
+            <Project key={project.id} {...project} />
+          ))}
+        </div>
 
-          <style jsx>{`.portfolio-gallery{ 
+        <style jsx>{`.portfolio-gallery{ 
             display: flex;
-            flex-direction: row;
             flex-wrap: wrap;
             justify-content: center;
             
             `}</style>
-
-          <div className={'col-md-12'}></div>
-        </div>
       </div>
     </section>
   );
