@@ -1,22 +1,44 @@
 if (typeof window !== 'undefined') {
-  const navBar = document.querySelector('.navbar');
+  const navbar = document.querySelector('.navbar');
   const home = document.querySelector('.home');
+  const about = document.querySelector('.about');
+  const education = document.querySelector('.education');
+  const experience = document.querySelector('.experience');
+  const portfolio = document.querySelector('.portfolio');
+  const contact = document.querySelector('.contact');
+  const links = [home, about, education, experience, portfolio, contact];
 
-  const options = {
+  const homeObserverOptions = {
     root: document.querySelector('#scrollArea'),
     rootMargin: '0px',
     threshold: 0.2,
   };
 
-  const observer = new IntersectionObserver(entries => {
+  const homeObserver = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (!entry.isIntersecting) {
-        navBar.style.backgroundColor = 'black';
+        navbar.style.backgroundColor = 'black';
       } else {
-        navBar.style.backgroundColor = '#38383899';
+        navbar.style.backgroundColor = '#38383899';
       }
     });
-  }, options);
+  }, homeObserverOptions);
 
-  observer.observe(home);
+  const navLinkObserverOptions = {
+    root: document.querySelector('#scrollArea'),
+    rootMargin: '0px',
+    threshold: 0.2,
+  };
+
+  const navLinkObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        navbar;
+      }
+    });
+  }, navLinkObserverOptions);
+
+  homeObserver.observe(home);
+
+  navLinkObserver.observe(home, about);
 }

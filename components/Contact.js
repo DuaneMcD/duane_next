@@ -42,7 +42,7 @@ const Contact = () => {
     e.preventDefault();
 
     let config = {
-      method: 'post',
+      method: 'POST',
       url: `${process.env.NEXT_PUBLIC_CONTACT}`,
       headers: {
         'Content-Type': 'application/json',

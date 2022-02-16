@@ -8,8 +8,21 @@ import SnakeGame from './images/portfolio/snake-game.png';
 import Todo from './images/portfolio/todo-app.png';
 import RPSGame from './images/portfolio/rps-game.png';
 import ShaunShines from './images/portfolio/shaun-shines-next.png';
+import Project from './Project';
 
 const Portfolio = () => {
+  const projects = [
+    {
+      id: 1,
+      title: `Twitter Clone`,
+      hoverTitle: `Chirpr`,
+      description: `A react based Twitter app featuring the Twitter API
+      2.0 and puppeteer web scraping.`,
+      image: Chirpr,
+      projectLink: `https://chirpr-demo.herokuapp.com/`,
+      tags: ['all', 'react'],
+    },
+  ];
   return (
     <section
       id='portfolio'
@@ -69,31 +82,17 @@ const Portfolio = () => {
               </li>
             </ul>
           </nav>
+          <div className='portfolioGallery'>
+            {projects.map(project => (
+              <Project key={project.id} {...project} />
+            ))}
+          </div>
+
           <div className={'col-md-12'}>
             <div className={'row'}>
               <div className={'portfolio-items isotopeWrapper'} id='3'>
-                <article className={'col-sm-4 isotopeItem react'}>
-                  <div className={'portfolio-item'}>
-                    <p className={'portfolio-title'}>Twitter Clone</p>
-                    <Image src={Chirpr} alt='' />
-                    <div className={'portfolio-desc align-center'}>
-                      <div className={'folio-info'}>
-                        <a
-                          href='https://chirpr-demo.herokuapp.com/'
-                          target='_blank'
-                          rel='noreferrer'
-                          className={'fancybox'}>
-                          <h5>Chirpr</h5>
-                          <h6>
-                            A react based Twitter app featuring the Twitter API
-                            2.0 and puppeteer web scraping.
-                          </h6>
-                          <i className={'fa fa-external-link fa-2x'}></i>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </article>
+                {}
+
                 <article className={'col-sm-4 isotopeItem next-js'}>
                   <div className={'portfolio-item'}>
                     <p className={'portfolio-title'}>Business Website</p>
