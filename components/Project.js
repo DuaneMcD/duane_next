@@ -29,38 +29,36 @@ function Project(props) {
         {`
           .project {
             position: relative;
-            margin: 10rem;
-            transition: transform 500ms ease;
+            margin: 1.35rem;
+            transition: transform 700ms ease;
+            width: 25%;
           }
           .project:hover {
-            display: block;
             transform: scale(1.02);
           }
 
           .onHover {
             width: 100%;
             height: 100%;
-            padding: -1em;
             position: absolute;
             top: 0;
             left: 0;
             text-align: center;
-            // display: none;
+            opacity: 0;
           }
-          .onHover:hover {
-            display: block;
-            background: rgba(150, 150, 150, 0.7);
-            color: white;
+          .onHover :hover {
+            opacity: 1;
+            background: rgba(85, 85, 85, 0.85);
           }
-
           .hoverTitle {
             color: white;
-            margin: 5rem 0 4rem 0;
-            font-size: 5em;
+            margin: 1em 0 0.75em 0;
+            font-size: 2em;
           }
           .description {
             color: white;
-            font-size: 2em;
+            font-size: 1.25em;
+            padding: 1.5em;
           }
         `}
       </style>

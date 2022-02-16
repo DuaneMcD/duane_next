@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Chirpr from './images/portfolio/chirpr.png';
 import Swapi from './images/portfolio/swapi.png';
 import Calculator from './images/portfolio/calculator.png';
@@ -21,6 +20,88 @@ const Portfolio = () => {
       image: Chirpr,
       projectLink: `https://chirpr-demo.herokuapp.com/`,
       tags: ['all', 'react'],
+    },
+    {
+      id: 2,
+      title: `Business Website`,
+      hoverTitle: `Shaun Shines`,
+      description: `This is a client site built for an car detailing
+      business. Built with Next.js & React. Features
+      nodemailer, Chatra (live chat) and custom react form
+      hook.`,
+      image: ShaunShines,
+      projectLink: `https://shaunshines.herokuapp.com/`,
+      tags: ['all', 'next.js'],
+    },
+    {
+      id: 3,
+      title: `Star Wars`,
+      hoverTitle: `Star Wars API`,
+      description: `A Star Wars data fetching app. Featuring bootstrap,
+      this app cleans, displays and sorts star wars
+      character data.`,
+      image: Swapi,
+      projectLink: `https://swapi-v.herokuapp.com/`,
+      tags: ['all', 'react'],
+    },
+    {
+      id: 4,
+      title: `Javascript Calculator`,
+      hoverTitle: `Calculator`,
+      description: `A four function calculator. Complete with history
+      and a memory function.`,
+      image: Calculator,
+      projectLink: `https://duanemcd.github.io/calculator/`,
+      tags: ['all', 'javascript'],
+    },
+    {
+      id: 5,
+      title: `React Expense Tracker`,
+      hoverTitle: `React.JS Expense Tracker`,
+      description: `An expense tracker with graph.js visuals using bootstrap.`,
+      image: ReactExpense,
+      projectLink: `https://expense-tracker-react-dm.herokuapp.com/`,
+      tags: ['all', 'react'],
+    },
+    {
+      id: 6,
+      title: `Snake Game`,
+      hoverTitle: `Snake`,
+      description: `A vanilla javascript/HTML snake game for desktop
+      browsers. Uses html canvas. Uses local storage for
+      high score persistence.`,
+      image: SnakeGame,
+      projectLink: `https://duanemcd.github.io/snake/`,
+      tags: ['all', 'javascript'],
+    },
+    {
+      id: 7,
+      title: `To-do App`,
+      hoverTitle: `To-Do App`,
+      description: ` A Javascript To-Do App featuring local storage.`,
+      image: Todo,
+      projectLink: `https://duanemcd.github.io/Todo-App/`,
+      tags: ['all', 'javascript'],
+    },
+    {
+      id: 8,
+      title: `Javascript Expense Tracker`,
+      hoverTitle: `JS Expense Tracker`,
+      description: `A JavaScript Expense tracker with local storage and
+      responsive design.`,
+      image: JsExpense,
+      projectLink: `https://duanemcd.github.io/expense-tracker/`,
+      tags: ['all', 'javascript'],
+    },
+    {
+      id: 9,
+      title: `Rock Paper Scissors!`,
+      hoverTitle: `Rock Paper Scissors Game`,
+      description: `A playful take on the classic rock paper scissors
+      game. Javascript, CSS and HTML.`,
+      image: RPSGame,
+      projectLink: `https://duanemcd.github.io/rps_game/`,
+      tags: ['all', 'javascript'],
     },
   ];
   return (
@@ -82,199 +163,21 @@ const Portfolio = () => {
               </li>
             </ul>
           </nav>
-          <div className='portfolioGallery'>
+          <div className='portfolio-gallery'>
             {projects.map(project => (
               <Project key={project.id} {...project} />
             ))}
           </div>
 
-          <div className={'col-md-12'}>
-            <div className={'row'}>
-              <div className={'portfolio-items isotopeWrapper'} id='3'>
-                {}
+          <style jsx>{`.portfolio-gallery{ 
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            
+            `}</style>
 
-                <article className={'col-sm-4 isotopeItem next-js'}>
-                  <div className={'portfolio-item'}>
-                    <p className={'portfolio-title'}>Business Website</p>
-                    <Image src={ShaunShines} alt='' />
-                    <div className={'portfolio-desc align-center'}>
-                      <div className={'folio-info'}>
-                        <a
-                          href='https://shaunshines.herokuapp.com/'
-                          target='_blank'
-                          rel='noreferrer'
-                          className={'fancybox'}>
-                          <h5>Shaunshines.com</h5>
-                          <h6>
-                            This is a client site built for an car detailing
-                            business. Built with Next.js & React. Features
-                            nodemailer, Chatra (live chat) and custom react form
-                            hook.
-                          </h6>
-                          <i className={'fa fa-external-link fa-2x'}></i>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </article>
-                <article className={'col-sm-4 isotopeItem react'}>
-                  <div className={'portfolio-item'}>
-                    <p className={'portfolio-title'}>Star Wars</p>
-                    <Image src={Swapi} alt='' />
-                    <div className={'portfolio-desc align-center'}>
-                      <div className={'folio-info'}>
-                        <a
-                          href='https://swapi-v.herokuapp.com/'
-                          target='_blank'
-                          rel='noreferrer'
-                          className={'fancybox'}>
-                          <h5>Star Wars API</h5>
-                          <h6>
-                            A Star Wars data fetching app. Featuring bootstrap,
-                            this app cleans, displays and sorts star wars
-                            character data.
-                          </h6>
-                          <i className={'fa fa-external-link fa-2x'}></i>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </article>
-                <article className={'col-sm-4 isotopeItem common-js'}>
-                  <div className={'portfolio-item'}>
-                    <p className={'portfolio-title'}>JavaScript Calculator</p>
-                    <Image src={Calculator} alt='' />
-                    <div className={'portfolio-desc align-center'}>
-                      <div className={'folio-info'}>
-                        <a
-                          href='https://duanemcd.github.io/calculator/'
-                          target='_blank'
-                          rel='noreferrer'
-                          className={'fancybox'}>
-                          <h5>Calculator</h5>
-                          <h6>
-                            A four function calculator. Complete with history
-                            and a memory function.
-                          </h6>
-                          <i className={'fa fa-external-link fa-2x'}></i>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </article>
-                <article className={'col-sm-4 isotopeItem react'}>
-                  <div className={'portfolio-item'}>
-                    <p className={'portfolio-title'}>React Expense Tracker</p>
-                    <Image src={ReactExpense} alt='' />
-                    <div className={'portfolio-desc align-center'}>
-                      <div className={'folio-info'}>
-                        <a
-                          href='https://expense-tracker-react-dm.herokuapp.com/'
-                          target='_blank'
-                          rel='noreferrer'
-                          className={'fancybox'}>
-                          <h5>React.js Expense Tracker</h5>
-                          <h6>
-                            A React Expense Tracker with chart.js and bootstrap
-                            5.
-                          </h6>
-                          <i className={'fa fa-external-link fa-2x'}></i>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </article>
-                <article className={'col-sm-4 isotopeItem common-js'}>
-                  <div className={'portfolio-item'}>
-                    <p className={'portfolio-title'}>Snake Game</p>
-                    <Image src={SnakeGame} alt='' />
-                    <div className={'portfolio-desc align-center'}>
-                      <div className={'folio-info'}>
-                        <a
-                          href='images/portfolio/snake-game.png'
-                          target='_blank'
-                          rel='noreferrer'
-                          className={'fancybox'}>
-                          <h5>Snake Game</h5>
-                          <h6>
-                            A vanilla javascript snake game for desktop
-                            browsers. Uses html canvas. Uses local storage for
-                            high score persistence.
-                          </h6>
-                          <i className={'fa fa-external-link fa-2x'}></i>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </article>
-                <article className={'col-sm-4 isotopeItem common-js'}>
-                  <div className={'portfolio-item'}>
-                    <p className={'portfolio-title'}>To-Do App</p>
-                    <Image src={Todo} alt='' />
-                    <div className={'portfolio-desc align-center'}>
-                      <div className={'folio-info'}>
-                        <a
-                          href='images/portfolio/todo-app.png'
-                          target='_blank'
-                          rel='noreferrer'
-                          className={'fancybox'}>
-                          <h5>To-do App</h5>
-                          <h6>
-                            A Javascript To-Do App featuring local storage.
-                          </h6>
-                          <i className={'fa fa-external-link fa-2x'}></i>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </article>
-                <article className={'col-sm-4 isotopeItem common-js'}>
-                  <div className={'portfolio-item'}>
-                    <p className={'portfolio-title'}>Expense Tracker</p>
-                    <Image src={JsExpense} alt='' />
-                    <div className={'portfolio-desc align-center'}>
-                      <div className={'folio-info'}>
-                        <a
-                          href='images/portfolio/expense-tracker.png'
-                          target='_blank'
-                          rel='noreferrer'
-                          className={'fancybox'}>
-                          <h5>Expense Tracker</h5>
-                          <h6>
-                            A JavaScript Expense tracker with localstorage and
-                            responsive design.
-                          </h6>
-                          <i className={'fa fa-external-link fa-2x'}></i>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </article>
-                <article className={'col-sm-4 isotopeItem common-js'}>
-                  <div className={'portfolio-item'}>
-                    <p className={'portfolio-title'}>Rock Paper Scissors</p>
-                    <Image src={RPSGame} alt='' />
-                    <div className={'portfolio-desc align-center'}>
-                      <div className={'folio-info'}>
-                        <a
-                          href='images/portfolio/rps-game.png'
-                          target='_blank'
-                          rel='noreferrer'
-                          className={'fancybox'}>
-                          <h5>Sword Hammer Shield!</h5>
-                          <h6>
-                            A playful take on the classic rock paper scissors
-                            game. Vanilla javascript, CSS and HTML
-                          </h6>
-                          <i className={'fa fa-external-link fa-2x'}></i>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </article>
-              </div>
-            </div>
-          </div>
+          <div className={'col-md-12'}></div>
         </div>
       </div>
     </section>
