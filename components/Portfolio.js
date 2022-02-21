@@ -144,12 +144,13 @@ const Portfolio = () => {
           ))}
         </div>
 
-        <style jsx>{`.portfolio-gallery{ 
+        <style jsx>{`
+          .portfolio-gallery {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            
-            `}</style>
+          }
+        `}</style>
       </div>
     </section>
   );
