@@ -20,8 +20,8 @@ function Project(props) {
           target='_blank'
           rel='noreferrer'
           className={'onHover-link'}>
-          <h5 className={'hoverTitle'}>{hoverTitle}</h5>
-          <h6 className={'description'}>{description}</h6>
+          <h4 className={'hoverTitle'}>{hoverTitle}</h4>
+          <h5 className={'description'}>{description}</h5>
           <i className={'fa fa-external-link fa-2x'}></i>
         </a>
       </div>
@@ -36,6 +36,11 @@ function Project(props) {
           .project:hover {
             transform: scale(1.02);
           }
+          .onHover:hover {
+            background: rgba(85, 85, 85, 0.85);
+            opacity: 1;
+            border-radius: 0.1em;
+          }
 
           .onHover {
             width: 100%;
@@ -45,10 +50,6 @@ function Project(props) {
             left: 0;
             text-align: center;
             opacity: 0;
-          }
-          .onHover :hover {
-            opacity: 1;
-            background: rgba(85, 85, 85, 0.85);
           }
           .hoverTitle {
             color: white;

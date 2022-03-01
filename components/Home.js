@@ -1,20 +1,20 @@
 import Image from 'next/image';
-import newyork from '../components/images/nyc_sky.jpg';
+import heroBanner from '../public/heroBanner.png';
 
 const Home = () => {
   return (
     <section id='home' className={'home'}>
       <div className={'banner-container'}>
-        {/* <Image
-          className={'heroImage'}
-          src={newyork}
-          alt='New York City Skyline'
-          priority
+        <Image
+          className={'heroBanner'}
+          src={heroBanner}
+          alt='VS Code Duane Function'
+          priority={true}
           placeholder='blur'
-          layout='fill'
-          objectFit='cover'
+          layout='responsive'
+          objectFit='contain'
           quality={100}
-        /> */}
+        />
       </div>
       <span className={'spacer'}></span>
     </section>
