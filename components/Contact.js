@@ -53,6 +53,7 @@ const Contact = () => {
     try {
       const response = await axios(config);
       console.log('Message Sent!');
+      console.log(response);
       resetForm();
     } catch (err) {
       console.error(err);
