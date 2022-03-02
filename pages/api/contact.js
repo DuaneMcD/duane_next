@@ -5,7 +5,7 @@ async function handleContact(req, res) {
 
   // create reusable transporter object using the default SMTP transport
   const transporter = nodemailer.createTransport({
-    host: 'mail.duanemcdonald.com',
+    host: process.env.HOST,
     port: 465,
     secure: true, // true for 465, false for other ports
     auth: {
@@ -28,7 +28,7 @@ async function handleContact(req, res) {
     });
 
     console.log('Message sent: %s', info.messageId);
-    res.status(200).end();
+    res.status(201).json(res.data);
   } catch (err) {
     console.error(err);
   }
