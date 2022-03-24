@@ -52,7 +52,7 @@ const Contact = () => {
 
     try {
       const response = await axios(config);
-      const data = await response.json();
+      const data = await response;
       console.log('Message Sent!');
       console.log(data);
       resetForm();
