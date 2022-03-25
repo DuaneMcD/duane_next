@@ -9,12 +9,18 @@ const Contact = () => {
     message: '',
   });
 
+  const [formStatus, setFormStatus] = useState(null);
+
   const resetForm = () => {
     setValues({
       user: '',
       email: '',
       message: '',
     });
+  };
+
+  const resetFormStatus = () => {
+    setFormStatus(null);
   };
 
   const inputs = [
@@ -55,9 +61,13 @@ const Contact = () => {
       const data = await response;
       console.log('Message Sent!');
       console.log(data);
+      setFormStatus('success');
       resetForm();
+      setTimeout(setFormStatus, 35000, null);
     } catch (err) {
+      setFormStatus('error');
       console.error(err);
+      setTimeout(setFormStatus(null), 500);
     }
   }
 
@@ -78,6 +88,18 @@ const Contact = () => {
         </div>
         <div className={'contactForm'}>
           <form name='sentMessage' id='contactForm' onSubmit={handleSubmit}>
+            {formStatus == 'success' ? (
+              <div className={'formSuccess'}>
+                Message Sent! You will receive a reply soon.
+              </div>
+            ) : null}
+            {formStatus == 'error' ? (
+              <div className={'formError'}>
+                Sorry, Message Sending Failed! Please refresh or try again
+                later.
+              </div>
+            ) : null}
+
             {inputs.map(input => (
               <FormInput
                 key={input.id}
@@ -92,6 +114,19 @@ const Contact = () => {
           </form>
         </div>
       </div>
+      <style jsx>
+        {`
+          .formSuccess {
+            background-color: rgba(23, 240, 23, 0.534);
+            color: rgb(201, 236, 201);
+            border-radius: 0.2;
+          }
+          .formError {
+            background-color: rgba(240, 24, 23, 0.534);
+            color: rgb(236, 201, 201);
+          }
+        `}
+      </style>
     </section>
   );
 };

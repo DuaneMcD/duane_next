@@ -10,7 +10,7 @@ async function handleContact(req, res) {
     secure: true, // true for 465, false for other ports
     auth: {
       user: process.env.NEXT_PUBLIC_USER,
-      pass: process.env.NEXT_PUBLIC_PASS,
+      // pass: process.env.NEXT_PUBLIC_PASS,
     },
     tls: {
       // do not fail on invalid certs
