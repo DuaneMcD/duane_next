@@ -7,6 +7,7 @@
 Scrollbar-styles
 */
 html {
+  scroll-behavior: smooth;
   scrollbar-color: white black;
   scrollbar-width: thin;
   -webkit-text-size-adjust: 100%;
@@ -172,6 +173,7 @@ a:hover {
 .navbar-toggle:focus {
   background: var(--theme-blue);
 }
+
 .social {
   margin: 10px 0 5px 0;
 }
@@ -208,6 +210,10 @@ a:hover {
 }
 #mainNav li a:hover,
 #mainNav li a:focus {
+  color: var(--theme-blue);
+}
+
+#mainNav li a.active {
   color: var(--theme-blue);
 }
 

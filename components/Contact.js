@@ -75,7 +75,7 @@ const Contact = () => {
     setValues({ ...values, [e.target.name]: e.target.value });
   }
   return (
-    <section id='contact' className={'page-section secPad'}>
+    <section id='contact' className={'contact page-section secPad'}>
       <div className={'container contact-container'}>
         <div className={'row'}>
           <div className={'heading'}>

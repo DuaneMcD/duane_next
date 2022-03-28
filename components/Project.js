@@ -30,11 +30,11 @@ function Project(props) {
           .project {
             position: relative;
             margin: 1.35rem;
-            transition: transform 700ms ease;
+            transition: transform 800ms ease-out;
             width: 25%;
           }
           .project:hover {
-            transform: scale(1.02);
+            transform: scale(1.03);
           }
           .onHover:hover {
             background: rgba(85, 85, 85, 0.85);

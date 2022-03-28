@@ -1,7 +1,7 @@
 import Image from 'next/image';
 const Experience = () => {
   return (
-    <section id='experience' className={'secPad'}>
+    <section id='experience' className={'secPad experience'}>
       <div className={'container'}>
         <h2>Technical Experience</h2>
         <div className={'experience-lists'}>

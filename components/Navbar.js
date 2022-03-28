@@ -37,33 +37,42 @@ export const Navbar = () => {
         </div>
         <div id='mainnav-container' className={'collapse navbar-collapse'}>
           <ul className={'mainnav'} id='mainNav'>
-            <li className={'active'}>
-              <a href='#home' className={'scroll-link'}>
+            <li>
+              <a data-nav='home' href='#home' className={'scroll-link'}>
                 Home
               </a>
             </li>
             <li>
-              <a href='#about' className={'scroll-link'}>
+              <a data-nav='about' href='#about' className={'scroll-link'}>
                 About
               </a>
             </li>
             <li>
-              <a href='#education' className={'scroll-link'}>
+              <a
+                data-nav='education'
+                href='#education'
+                className={'scroll-link'}>
                 Education
               </a>
             </li>
             <li>
-              <a href='#experience' className={'scroll-link'}>
+              <a
+                data-nav='experience'
+                href='#experience'
+                className={'scroll-link'}>
                 Experience
               </a>
             </li>
             <li>
-              <a href='#portfolio' className={'scroll-link'}>
+              <a
+                data-nav='portfolio'
+                href='#portfolio'
+                className={'scroll-link'}>
                 Portfolio
               </a>
             </li>
             <li>
-              <a href='#contact' className={'scroll-link'}>
+              <a data-nav='contact' href='#contact' className={'scroll-link'}>
                 Contact
               </a>
             </li>

@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { motion } from 'framer-motion';
 
 import Chirpr from './images/portfolio/chirpr.png';
 import Swapi from './images/portfolio/swapi.png';
@@ -113,7 +114,7 @@ const Portfolio = () => {
   return (
     <section
       id='portfolio'
-      className={'page-section section appear clearfix secPad'}>
+      className={'portfolio page-section section appear clearfix secPad'}>
       <div className={'container'}>
         <div className={'heading'}>
           <h2>Project Portfolio</h2>

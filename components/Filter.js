@@ -29,11 +29,12 @@ const Filter = ({
         </li>
         <li>
           <a
-            onClick={() => setGalleryFilter('javascript')}
-            className={galleryFilter === 'javascript' ? 'active' : ''}>
-            Javascript
+            onClick={() => setGalleryFilter('next.js')}
+            className={galleryFilter === 'next.js' ? 'active' : ''}>
+            Next.js
           </a>
         </li>
+
         <li>
           <a
             onClick={() => setGalleryFilter('react')}
@@ -43,9 +44,9 @@ const Filter = ({
         </li>
         <li>
           <a
-            onClick={() => setGalleryFilter('next.js')}
-            className={galleryFilter === 'next.js' ? 'active' : ''}>
-            Next.js
+            onClick={() => setGalleryFilter('javascript')}
+            className={galleryFilter === 'javascript' ? 'active' : ''}>
+            Javascript
           </a>
         </li>
       </ul>
