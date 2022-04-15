@@ -38,11 +38,6 @@ export const Navbar = () => {
         <div id='mainnav-container' className={'collapse navbar-collapse'}>
           <ul className={'mainnav'} id='mainNav'>
             <li>
-              <a data-nav='home' href='#home' className={'scroll-link'}>
-                Home
-              </a>
-            </li>
-            <li>
               <a data-nav='about' href='#about' className={'scroll-link'}>
                 About
               </a>

@@ -22,8 +22,8 @@ if (typeof window !== 'undefined') {
 
   const navLinkObserverOptions = {
     root: document.querySelector('#scrollArea'),
-    rootMargin: '25px',
-    threshold: 0.5,
+    rootMargin: '-5% 0px -35% 0px',
+    threshold: 0,
   };
 
   const navLinkObserver = new IntersectionObserver(entries => {

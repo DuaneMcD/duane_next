@@ -4,7 +4,7 @@ const About = () => {
   return (
     <>
       <section id='about' className={'about'}>
-        <section className={'introText'}>
+        <article className={'introText'}>
           <div className={'container'}>
             <div className={'heroText'}>
               <h1>DUANE McDONALD</h1>
@@ -19,7 +19,7 @@ const About = () => {
                 technology and solutions more accessible for all.`}
             </p>
           </div>
-        </section>
+        </article>
         <div className='about-part2'>
           <div className={'container'}>
             <div className={'duane-sunglasses-container'}>
