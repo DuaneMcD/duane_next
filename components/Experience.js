@@ -1,7 +1,7 @@
 import Image from 'next/image';
 const Experience = () => {
   return (
-    <section id='experience' className={'secPad experience'}>
+    <section id='experience' className={'experience'}>
       <div className={'container'}>
         <h2>Technical Experience</h2>
         <div className={'experience-lists'}>
@@ -10,16 +10,19 @@ const Experience = () => {
             <li>Javascript</li>
             <li>HTML</li>
             <li>CSS</li>
+            <li>SQL</li>
             <li>Python</li>
           </ul>
           <ul>
             <h4 className={'frameworks'}>Frameworks & Libraries</h4>
-            <li>Bootstrap</li>
-            <li>Sass</li>
-            <li>Node.js</li>
             <li>React.js</li>
             <li>Next.js</li>
+            <li>Node.js</li>
+            <li>Directus</li>
+            <li>Holoviz</li>
             <li>Express</li>
+            <li>Bootstrap</li>
+            <li>Sass</li>
           </ul>
           <div className={'technologies'}>
             <h4>Technologies</h4>
@@ -34,6 +37,7 @@ const Experience = () => {
               <ul className={'tech-list2'}>
                 <li>Adobe XD</li>
                 <li>Heroku</li>
+                <li>Vercel</li>
                 <li>CPanel</li>
                 <li>Wordpress</li>
                 <li>SSH</li>

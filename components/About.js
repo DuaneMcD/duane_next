@@ -20,6 +20,8 @@ const About = () => {
             </p>
           </div>
         </article>
+      </section>
+      <section>
         <div className='about-part2'>
           <div className={'container'}>
             <div className={'duane-sunglasses-container'}>

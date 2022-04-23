@@ -30,6 +30,7 @@ html {
 }
 section {
   scroll-margin-top: 2em;
+  padding: 3em 3.25em;
 }
 
 * {
@@ -137,8 +138,8 @@ a:hover {
   top: 0;
 }
 .container {
-  max-width: 1320px;
-  margin-inline: 2%;
+  /* max-width: 1320px; */
+  margin-inline: 5%;
 }
 
 .spacer {
@@ -299,10 +300,13 @@ a:hover {
   width: 100%;
   height: 100%;
   z-index: 0;
+  background-color: black;
+  padding: 0;
 }
 #about {
   position: relative;
   scroll-margin-top: 4em;
+  background-color: black;
 }
 .about-part2 {
   display: flex;
@@ -336,7 +340,7 @@ a:hover {
   margin: 0px;
 }
 .secPad {
-  padding: 60px 0;
+  /* padding: 60px 0; */
 }
 
 /* .da-arrows span:after {
@@ -369,7 +373,7 @@ a:hover {
 #education {
   color: ghostwhite;
   background-color: black;
-  padding: 3em 0.5em;
+  /* padding: 3em 3.25em; */
 }
 #education > div > h3 > strong {
   display: flex;
@@ -380,8 +384,9 @@ a:hover {
   margin-right: 2em;
 }
 #education h4 {
-  line-height: 1.5;
-  padding-right: 2.15em;
+  line-height: 1.75;
+  letter-spacing: 0.05em;
+  padding-right: 0.5em;
 }
 
 #experience {
@@ -423,7 +428,7 @@ a:hover {
 }
 
 .experienceBlurb {
-  margin: 2.5em 18% 0 18%;
+  margin: 2.5em 2.5% 0 2.5%;
 }
 .grid .text-content {
   display: block;
@@ -456,6 +461,7 @@ a:hover {
   letter-spacing: 0.5px;
   font-weight: bold;
   margin-bottom: 0.25em;
+  color: var(--theme-blue);
 }
 #portfolio img {
   width: 100%;
@@ -671,14 +677,27 @@ tact ul li {
   letter-spacing: 1px;
   border: none;
   border-radius: 4px;
+  margin: 0.25em;
+  padding: 0.2em;
+}
+.contactForm button {
+  font-size: 1.75em;
+  font-weight: bold;
+  padding: 0.18em 1.25em;
+  margin: 0.2em;
+  cursor: pointer;
+  border-radius: 4px;
 }
 .contactHeader {
+  color: var(--theme-blue);
   font-weight: normal;
   font-variant: small-caps;
 }
 .contactBlurb {
   color: white;
   font-weight: bolder;
+  line-height: 1.35em;
+  letter-spacing: 0.05em;
 }
 .copyright {
   font-size: 1.1em;
@@ -695,7 +714,7 @@ tact ul li {
     float: right;
   }
   .navbar-nav > li > a {
-    padding: 5px 12px !important;
+    padding: 5px 12px;
     border-radius: 5px;
     margin: 19px 0px;
   }

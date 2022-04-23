@@ -49,6 +49,20 @@ const Filter = ({
             Javascript
           </a>
         </li>
+        <li>
+          <a
+            onClick={() => setGalleryFilter('python')}
+            className={galleryFilter === 'python' ? 'active' : ''}>
+            Python
+          </a>
+        </li>
+        <li>
+          <a
+            onClick={() => setGalleryFilter('sql')}
+            className={galleryFilter === 'sql' ? 'active' : ''}>
+            SQL
+          </a>
+        </li>
       </ul>
       <style jsx>
         {`

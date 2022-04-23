@@ -51,16 +51,16 @@ const Portfolio = () => {
       projectLink: `https://swapi-v.herokuapp.com/`,
       tags: ['all', 'react'],
     },
-    {
-      id: 4,
-      title: `Javascript Calculator`,
-      hoverTitle: `Calculator`,
-      description: `A four function calculator. Complete with history
-      and a memory function.`,
-      image: Calculator,
-      projectLink: `https://duanemcd.github.io/calculator/`,
-      tags: ['all', 'javascript'],
-    },
+    // {
+    //   id: 4,
+    //   title: `Javascript Calculator`,
+    //   hoverTitle: `Calculator`,
+    //   description: `A four function calculator. Complete with history
+    //   and a memory function.`,
+    //   image: Calculator,
+    //   projectLink: `https://duanemcd.github.io/calculator/`,
+    //   tags: ['all', 'javascript'],
+    // },
     {
       id: 5,
       title: `React Expense Tracker`,
@@ -81,40 +81,56 @@ const Portfolio = () => {
       projectLink: `https://duanemcd.github.io/snake/`,
       tags: ['all', 'javascript'],
     },
+    // {
+    //   id: 7,
+    //   title: `To-do App`,
+    //   hoverTitle: `To-Do App`,
+    //   description: ` A Javascript To-Do App featuring local storage.`,
+    //   image: Todo,
+    //   projectLink: `https://duanemcd.github.io/Todo-App/`,
+    //   tags: ['all', 'javascript'],
+    // },
+    // {
+    //   id: 8,
+    //   title: `Javascript Expense Tracker`,
+    //   hoverTitle: `JS Expense Tracker`,
+    //   description: `A JavaScript Expense tracker with local storage and
+    //   responsive design.`,
+    //   image: JsExpense,
+    //   projectLink: `https://duanemcd.github.io/expense-tracker/`,
+    //   tags: ['all', 'javascript'],
+    // },
+    // {
+    //   id: 9,
+    //   title: `Rock Paper Scissors!`,
+    //   hoverTitle: `Rock Paper Scissors Game`,
+    //   description: `A playful take on the classic rock paper scissors
+    //   game. Javascript, CSS and HTML.`,
+    //   image: RPSGame,
+    //   projectLink: `https://duanemcd.github.io/rps_game/`,
+    //   tags: ['all', 'javascript'],
+    // },
     {
-      id: 7,
-      title: `To-do App`,
-      hoverTitle: `To-Do App`,
-      description: ` A Javascript To-Do App featuring local storage.`,
-      image: Todo,
-      projectLink: `https://duanemcd.github.io/Todo-App/`,
-      tags: ['all', 'javascript'],
-    },
-    {
-      id: 8,
-      title: `Javascript Expense Tracker`,
-      hoverTitle: `JS Expense Tracker`,
-      description: `A JavaScript Expense tracker with local storage and
-      responsive design.`,
-      image: JsExpense,
-      projectLink: `https://duanemcd.github.io/expense-tracker/`,
-      tags: ['all', 'javascript'],
-    },
-    {
-      id: 9,
-      title: `Rock Paper Scissors!`,
-      hoverTitle: `Rock Paper Scissors Game`,
-      description: `A playful take on the classic rock paper scissors
-      game. Javascript, CSS and HTML.`,
+      id: 10,
+      title: `Storefront E-commerce`,
+      hoverTitle: `A fully hosted Web Store`,
+      description: `Built on Next.js and directus (CMS), this project enables a scalable online presence. Directus uses SQL to store objects and data.`,
       image: RPSGame,
-      projectLink: `https://duanemcd.github.io/rps_game/`,
-      tags: ['all', 'javascript'],
+      projectLink: ``,
+      tags: ['all', 'next.js', 'sql'],
+    },
+    {
+      id: 11,
+      title: `Population Dashboard`,
+      hoverTitle: `Python Hvplot Dashboard`,
+      description: ` `,
+      image: RPSGame,
+      projectLink: ``,
+      tags: ['all', 'python'],
     },
   ];
   return (
-    <section
-      id='portfolio'
-      className={'portfolio page-section section appear clearfix secPad'}>
+    <section id='portfolio' className={'portfolio'}>
       <div className={'container'}>
         <div className={'heading'}>
           <h2>Project Portfolio</h2>

@@ -75,14 +75,16 @@ const Contact = () => {
     setValues({ ...values, [e.target.name]: e.target.value });
   }
   return (
-    <section id='contact' className={'contact page-section secPad'}>
+    <section id='contact' className={'contact'}>
       <div className={'container contact-container'}>
         <div className={'row'}>
           <div className={'heading'}>
             <h2 className={'contactHeader'}>{`Let's Work Together`}</h2>
             <p className={'contactBlurb'}>
-              {`I'd love to hear about your next project! Please use this form
-              and I'll be in touch shortly.`}
+              {`I'd love to hear about your next project! `}
+            </p>
+            <p className={'contactBlurb'}>
+              {`Please use this form and I'll be in touch shortly.`}
             </p>
           </div>
         </div>
@@ -109,7 +111,7 @@ const Contact = () => {
               />
             ))}
             <button type='submit' className={'btn btn-primary pull-right'}>
-              Send
+              Send Message!
             </button>
           </form>
         </div>
