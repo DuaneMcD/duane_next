@@ -76,59 +76,43 @@ const Contact = () => {
   }
   return (
     <section id='contact' className={'contact'}>
-      <div className={'container contact-container'}>
-        <div className={'row'}>
-          <div className={'heading'}>
-            <h2 className={'contactHeader'}>{`Let's Work Together`}</h2>
-            <p className={'contactBlurb'}>
-              {`I'd love to hear about your next project! `}
-            </p>
-            <p className={'contactBlurb'}>
-              {`Please use this form and I'll be in touch shortly.`}
-            </p>
-          </div>
-        </div>
-        <div className={'contactForm'}>
-          <form name='sentMessage' id='contactForm' onSubmit={handleSubmit}>
-            {formStatus == 'success' ? (
-              <div className={'formSuccess'}>
-                Message Sent! You will receive a reply soon.
-              </div>
-            ) : null}
-            {formStatus == 'error' ? (
-              <div className={'formError'}>
-                Sorry, Message Sending Failed! Please refresh or try again
-                later.
-              </div>
-            ) : null}
+      <div className={'contact-container'}>
+        <h2 className={'contactHeader'}>{`Let's Work Together`}</h2>
+        <p className={'contactBlurb'}>
+          {`I'd love to hear about your next project! `}
+        </p>
+        <p className={'contactBlurb'}>
+          {`Please use this form and I'll be in touch shortly.`}
+        </p>
+        <form
+          className={'contactForm'}
+          name='sentMessage'
+          id='contactForm'
+          onSubmit={handleSubmit}>
+          {formStatus == 'success' ? (
+            <div className={'formSuccess'}>
+              Message Sent! You will receive a reply soon.
+            </div>
+          ) : null}
+          {formStatus == 'error' ? (
+            <div className={'formError'}>
+              Sorry, Message Sending Failed! Please refresh or try again later.
+            </div>
+          ) : null}
 
-            {inputs.map(input => (
-              <FormInput
-                key={input.id}
-                {...input}
-                value={values[input.name]}
-                onChange={handleChange}
-              />
-            ))}
-            <button type='submit' className={'btn btn-primary pull-right'}>
-              Send Message!
-            </button>
-          </form>
-        </div>
+          {inputs.map(input => (
+            <FormInput
+              key={input.id}
+              {...input}
+              value={values[input.name]}
+              onChange={handleChange}
+            />
+          ))}
+          <button type='submit' className={'btn btn-primary pull-right'}>
+            Send Message!
+          </button>
+        </form>
       </div>
-      <style jsx>
-        {`
-          .formSuccess {
-            background-color: rgba(23, 240, 23, 0.534);
-            color: rgb(201, 236, 201);
-            border-radius: 0.2;
-          }
-          .formError {
-            background-color: rgba(240, 24, 23, 0.534);
-            color: rgb(236, 201, 201);
-          }
-        `}
-      </style>
     </section>
   );
 };

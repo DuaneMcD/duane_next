@@ -41,7 +41,7 @@ const About = () => {
                 }
               `}</style>
             </div>
-            <div className={'col-md-8 tileBox'}>
+            <div className={'tileBox'}>
               <div className={'txtHead'}>
                 <h2>{`Hello I'm Duane McDonald`}</h2>
                 <h3>A Passionate Web Developer.</h3>

@@ -31,7 +31,6 @@ export default function Index() {
         />
         <meta name='author' content='Duane McDonald' />
       </Head>
-
       <Navbar />
       <Home />
       <About />

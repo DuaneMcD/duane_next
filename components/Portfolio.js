@@ -132,23 +132,21 @@ const Portfolio = () => {
   return (
     <section id='portfolio' className={'portfolio'}>
       <div className={'container'}>
-        <div className={'heading'}>
-          <h2>Project Portfolio</h2>
-          <p className={'portfolio-blurb'}>
-            Here is a collection of past and current projects I have built.
-            Hover for a description and click for a demo. Enjoy!
-          </p>
-          <p className={'portfolio-blurb'}>
-            Checkout
-            <a
-              href='https://www.github.com/duanemcd'
-              target='_blank'
-              rel='noreferrer'>
-              {' my github '}
-            </a>
-            for full repositories and code details.
-          </p>
-        </div>
+        <h2>Project Portfolio</h2>
+        <p className={'portfolio-blurb'}>
+          Here is a collection of past and current projects I have built. Hover
+          for a description and click for a demo. Enjoy!
+        </p>
+        <p className={'portfolio-blurb'}>
+          Checkout
+          <a
+            href='https://www.github.com/duanemcd'
+            target='_blank'
+            rel='noreferrer'>
+            {' my github '}
+          </a>
+          for full repositories and code details.
+        </p>
         <Filter
           projects={projects}
           setDisplayedProjects={setDisplayedProjects}
