@@ -138,15 +138,8 @@ a:hover {
   top: 0;
 }
 .container {
-  /* max-width: 1320px; */
   margin-inline: 5%;
-}
-
-.spacer {
-  display: block;
-  background-color: black;
-  width: 100%;
-  height: 5vh;
+  padding-inline: auto;
 }
 
 /* Navbar
@@ -237,9 +230,8 @@ a:hover {
 
 /*--- Banner ----*/
 .banner-container {
-  padding: 4.75em 12.5% 0;
+  padding: 5em 10% 0.5em;
   background: rgb(30, 30, 30);
-  /* max-width: 100em; */
 }
 
 /*Intro Content*/
@@ -339,41 +331,11 @@ a:hover {
   padding: 20px;
   margin: 0px;
 }
-.secPad {
-  /* padding: 60px 0; */
-}
 
-/* .da-arrows span:after {
-  width: 25px;
-  height: 24px;
-}
-.da-arrows span {
-  position: absolute;
-  top: 50%;
-  height: 34px;
-  width: 34px;
-  border-radius: 60px;
-  background: none;
-}
-.da-dots span {
-  display: inline-block;
-  position: relative;
-  width: 16px;
-  height: 16px;
-  border-radius: 0px;
-  background: rgba(255, 255, 255, 0.13);
-  margin: 3px;
-  cursor: pointer;
-  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6) inset,
-    1px 1px 1px rgba(255, 255, 255, 0.1);
-  border: 2px solid rgba(255, 255, 255, 0.6);
-} */
-
-/*Education / Experience*/
+/*Education */
 #education {
   color: ghostwhite;
   background-color: black;
-  /* padding: 3em 3.25em; */
 }
 #education > div > h3 > strong {
   display: flex;
@@ -389,70 +351,57 @@ a:hover {
   padding-right: 0.5em;
 }
 
-#experience {
-  background: #f8f8f8;
-}
+/*Experience */
 .experience-lists {
   display: flex;
+  flex-wrap: wrap;
+  gap: 12.5%;
   justify-content: center;
-  gap: 5em;
-  /* margin: 0.5em 0 2em 5em; */
 }
+.experience-lists ul {
+  padding: 1.1em 0.95em;
+}
+
 .experience-lists ul h4 {
   font-size: 2em;
   text-transform: uppercase;
+  padding-bottom: 0.25em;
 }
 .experience-lists ul li {
-  font-size: 1.2em;
-  text-transform: uppercase;
-  margin-left: 2.25em;
   list-style: square;
+  text-transform: uppercase;
+  font-size: 1.2em;
+  margin-inline: 2.05em;
+}
+::marker {
+  color: var(--theme-blue);
+}
+li:hover::marker {
+  color: var(--theme-orange);
 }
 .frameworks {
   max-width: 13ch;
 }
+.experienceBlurb {
+  text-align: center;
+  max-width: 75%;
+  margin: 1.15em auto 0 auto;
+}
+.frameworks-list,
 .technologies {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  margin-left: 2.25em;
+  max-height: 11rem;
 }
-.technologies h4 {
-  font-size: 2em;
-  text-transform: uppercase;
-  margin-inline: auto;
-}
-.technologies-list {
-  display: flex;
-}
-.tech-list {
-  min-width: fit-content;
+.frameworks-list {
+  max-height: 8rem;
 }
 
-.experienceBlurb {
-  margin: 2.5em 2.5% 0 2.5%;
-}
-.grid .text-content {
-  display: block;
-  padding-left: 19%;
-  padding-right: 8%;
-}
-.grid .text-content h5 {
-  font-weight: bold;
-}
-.grid .grid-item .item-content {
-  display: block;
-  outline: none;
-  padding: 20px 0;
-}
-.item-content .fa {
-  position: absolute;
-  color: #646464;
-  font-size: 4.5em;
-  top: 36px;
-}
 /* Portfolio */
-.isotopeWrapper article {
-  margin-bottom: 30px;
-}
+
 #portfolio {
   background: black;
 }
@@ -706,6 +655,17 @@ tact ul li {
   text-align: center;
   padding: 2em 0 2em 0;
 }
+
+@media (max-width: 950px) {
+  .caption {
+    border: none;
+  }
+  .experience-lists {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+  }
+}
 /* @media (min-width: 768px) {
   .header .navbar-brand {
     padding-left: 0;
@@ -720,7 +680,7 @@ tact ul li {
   }
 } */
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .banner-container > img {
     min-width: 100%;
     height: 400px;
@@ -933,4 +893,4 @@ tact ul li {
   -ms-user-select: none;
   user-select: none;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-}
+} */

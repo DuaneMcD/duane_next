@@ -16,7 +16,6 @@ const Home = () => {
           quality={100}
         />
       </div>
-      <span className={'spacer'}></span>
     </section>
   );
 };

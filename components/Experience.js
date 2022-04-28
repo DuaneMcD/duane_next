@@ -15,35 +15,33 @@ const Experience = () => {
           </ul>
           <ul>
             <h4 className={'frameworks'}>Frameworks & Libraries</h4>
-            <li>React.js</li>
-            <li>Next.js</li>
-            <li>Node.js</li>
-            <li>Directus</li>
-            <li>Holoviz</li>
-            <li>Express</li>
-            <li>Bootstrap</li>
-            <li>Sass</li>
-          </ul>
-          <div className={'technologies'}>
-            <h4>Technologies</h4>
-            <div className={'technologies-list'}>
-              <ul className={'tech-list'}>
-                <li>Git</li>
-                <li>Github</li>
-                <li>Rest API</li>
-                <li>Graph API</li>
-                <li>VS Code</li>
-              </ul>
-              <ul className={'tech-list2'}>
-                <li>Adobe XD</li>
-                <li>Heroku</li>
-                <li>Vercel</li>
-                <li>CPanel</li>
-                <li>Wordpress</li>
-                <li>SSH</li>
-              </ul>
+            <div className={'frameworks-list'}>
+              <li>React.js</li>
+              <li>Next.js</li>
+              <li>Node.js</li>
+              <li>Directus</li>
+              <li>Holoviz</li>
+              <li>Express</li>
+              <li>Bootstrap</li>
+              <li>Sass</li>
             </div>
-          </div>
+          </ul>
+          <ul>
+            <h4>Technologies</h4>
+            <div className={'technologies'}>
+              <li>Git</li>
+              <li>Github</li>
+              <li>Rest API</li>
+              <li>Graph API</li>
+              <li>VS Code</li>
+              <li>Adobe XD</li>
+              <li>Heroku</li>
+              <li>Vercel</li>
+              <li>CPanel</li>
+              <li>Wordpress</li>
+              <li>SSH</li>
+            </div>
+          </ul>
         </div>
         <p className={'experienceBlurb'}>
           I champion writing lean, clean and practical code. Readability is key.
