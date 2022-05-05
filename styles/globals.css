@@ -74,8 +74,8 @@ h2 {
   font-variant: small-caps;
 }
 p {
-  font-size: 1.25em;
-  color: #858585;
+  font-size: 1.3em;
+  color: #565555;
 }
 a {
   color: var(--theme-blue);
@@ -99,7 +99,6 @@ a {
 .form-control {
   border-radius: 0px;
 }
-
 .container {
   margin-inline: 5%;
   padding-inline: auto;
@@ -117,9 +116,7 @@ a {
   border-radius: 0;
   padding: 0 5% 0 5%;
 }
-.navbar > #home {
-  background: rgba(172, 5, 5, 0.6);
-}
+
 .navbar-toggle {
   border: none;
   border-color: var(--theme-blue);
@@ -225,8 +222,15 @@ a {
   margin: 0 0 0.85em 0;
 }
 .duane-sunglasses-container {
-  max-width: 15vw;
+  max-width: 16vw;
   padding: 2% 15% 2% 2%;
+}
+.duane-sunglasses {
+  border-radius: 100px 2px 100px 2px;
+}
+.about-hello,
+.about-blurb {
+  white-space: pre-line;
 }
 .caption {
   font-size: 1.1em;
@@ -250,7 +254,6 @@ a {
   font-weight: 500;
 }
 #home {
-  position: relative;
   top: 0;
   width: 100%;
   height: 100%;
@@ -258,20 +261,20 @@ a {
   background-color: black;
   padding: 0;
 }
-#about {
-  position: relative;
-  scroll-margin-top: 4em;
+#hero {
   background-color: black;
 }
-.about-part2 {
-  display: flex;
-  background-color: white;
+#about {
+  scroll-margin-top: 4em;
 }
-.about-part2 .container {
+#about .container {
   display: flex;
+  padding: 2.5em;
 }
-#about > div {
-  padding: 2em;
+.about-header {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
 }
 #about h2,
 #about h3 {
@@ -279,9 +282,9 @@ a {
 }
 #about h3 {
   font-size: 1.5em;
-  margin: 20px 0 10px 0.25em;
+  /* margin: 1.15em 0 0.7em 0.25em; */
 }
-.tileBox p {
+.about-blurb {
   background-color: #f0f0f0;
   font-size: 1.25em;
   color: black;
@@ -554,7 +557,9 @@ nav#filter a:hover {
   :root {
     font-size: 12px;
   }
-
+  .duane-sunglasses-container {
+    display: none;
+  }
   .experience-lists {
     display: flex;
     place-items: center;

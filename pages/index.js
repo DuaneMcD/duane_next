@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
 import Navbar from '../components/Navbar';
 import Home from '../components/Home';
+import Hero from '../components/Hero';
 import About from '../components/About';
 import Education from '../components/Education';
 import Experience from '../components/Experience';
@@ -33,10 +34,11 @@ export default function Index() {
       </Head>
       <Navbar />
       <Home />
+      <Hero />
       <About />
-      <Education />
-      <Experience />
       <Portfolio />
+      <Experience />
+      <Education />
       <Contact />
       <Footer />
 

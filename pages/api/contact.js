@@ -35,7 +35,7 @@ async function handleContact(req, res) {
       console.log('Message sent: %s', info.messageId);
       res.status(201).json(res.data);
     } catch (err) {
-      res.status(500).json(err);
+      res.status(err).json(err);
       console.error(err);
     }
   } else {
