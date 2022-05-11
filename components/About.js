@@ -21,9 +21,9 @@ const About = () => {
           </h2>
           <h3>A Passionate Web Developer.</h3>
           <p className={'about-blurb'}>
-            {`I see the internet as an amazing place. A tool, utility, and a resource. It empowers us to connect more frequently and conduct ourselves more efficiently. And I want to take the web further.
-                
-              Technology is powerful, but for some users it's more like a hurdle. Wether that is because they're not technically inclined, their tools suffer from poor design or simply a solution that doesn't solve for them; I see opportunity to make our greatest innovations yet.`}
+            {`I think the Internet is an incredible place. A tool, utility, and a resource. This empowers us to connect more often and conduct ourselves in a more efficient manner. And I want to take the web further.
+              
+              Technology is powerful, but for some users, this is rather an obstacle. Maybe this is because they are not technically inclined, their tools suffer from poor design or simply a solution that does not solve for them. I see an opportunity for our biggest innovations.`}
           </p>
         </div>
       </div>

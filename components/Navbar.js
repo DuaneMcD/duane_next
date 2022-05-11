@@ -20,7 +20,7 @@ export const Navbar = () => {
             rel='noreferrer'>
             <FontAwesomeIcon
               size='2x'
-              className={'fa' && 'fa-github' && 'nav-social-ico'}
+              className={'fa' && 'fa-github'}
               icon={faGithub}
             />
           </a>
@@ -30,7 +30,7 @@ export const Navbar = () => {
             rel='noreferrer'>
             <FontAwesomeIcon
               size='2x'
-              className={'fa' && 'fa-linkedin' && 'nav-social-ico'}
+              className={'fa' && 'fa-linkedin'}
               icon={faLinkedin}
             />
           </a>

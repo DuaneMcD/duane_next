@@ -10,7 +10,7 @@ async function handleContact(req, res) {
     secure: true, // true for 465, false for other ports
     auth: {
       user: process.env.NEXT_PUBLIC_USER,
-      // pass: process.env.NEXT_PUBLIC_PASS,
+      pass: process.env.NEXT_PUBLIC_PASS,
     },
     tls: {
       // do not fail on invalid certs
@@ -35,7 +35,7 @@ async function handleContact(req, res) {
       console.log('Message sent: %s', info.messageId);
       res.status(201).json(res.data);
     } catch (err) {
-      res.status(err).json(err);
+      res.status(500).json(err);
       console.error(err);
     }
   } else {

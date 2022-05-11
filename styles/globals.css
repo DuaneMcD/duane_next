@@ -118,6 +118,7 @@ a {
 }
 
 .navbar-toggle {
+  display: none;
   border: none;
   border-color: var(--theme-blue);
   background-color: var(--theme-blue);
@@ -129,14 +130,18 @@ a {
 }
 
 .social {
-  margin: 10px 0 5px 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0.75em 0 0.25em 0;
 }
 .social a:hover {
   color: var(--theme-blue);
 }
 .social a {
-  font-size: 1.75em;
-  margin: 0 8px;
+  min-width: 1.5em;
+  font-size: min(1.75em, 30px);
+  margin-inline: 0.35em;
 }
 .fa-github,
 .fa-linkedin {
@@ -168,23 +173,6 @@ a {
 }
 
 #mainNav li a.active {
-  color: var(--theme-blue);
-}
-
-.page-section {
-  width: 100%;
-  height: auto;
-  padding: 30px 0;
-}
-.page-section h1 {
-  font-size: 3.5em;
-  margin: 90px 0 30px;
-  line-height: 1.2em;
-}
-.page-section h1 span {
-  font-weight: 200;
-}
-.page-section h2 {
   color: var(--theme-blue);
 }
 
