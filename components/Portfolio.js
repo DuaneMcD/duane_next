@@ -10,7 +10,7 @@ import SnakeGame from './images/portfolio/snake-game.png';
 import Todo from './images/portfolio/todo-app.png';
 import RPSGame from './images/portfolio/rps-game.png';
 import ShaunShines from './images/portfolio/shaun-shines-next.png';
-import Dashboard from './images/portfolio/python-dashboard';
+import Dashboard from './images/portfolio/python-dashboard.png';
 import Project from './Project';
 import Filter from './Filter';
 
