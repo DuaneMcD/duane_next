@@ -1,6 +1,4 @@
 import Head from 'next/head';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
 import Navbar from '../components/Navbar';
 import Home from '../components/Home';
 import Hero from '../components/Hero';

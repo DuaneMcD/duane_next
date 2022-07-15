@@ -10,7 +10,8 @@ html {
   scroll-behavior: smooth;
   scrollbar-color: white black;
   scrollbar-width: thin;
-  -webkit-text-size-adjust: 100%;
+  -webkit-text-size-adjust: auto;
+  -moz-text-size-adjust: auto;
 }
 ::-webkit-scrollbar {
   width: 7.5px;
@@ -116,19 +117,16 @@ a {
   border-radius: 0;
   padding: 0 5% 0 5%;
 }
-
 .navbar-toggle {
   display: none;
   border: none;
   border-color: var(--theme-blue);
   background-color: var(--theme-blue);
 }
-
 .navbar-toggle:hover,
 .navbar-toggle:focus {
   background: var(--theme-blue);
 }
-
 .social {
   display: flex;
   flex-direction: row;
@@ -142,6 +140,12 @@ a {
   min-width: 1.5em;
   font-size: min(1.75em, 30px);
   margin-inline: 0.35em;
+}
+/* firefox icon resize fix for fontawesome bug */
+@-moz-document url-prefix() {
+  .social {
+    max-width: 8em;
+  }
 }
 .fa-github,
 .fa-linkedin {

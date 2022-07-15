@@ -10,6 +10,7 @@ import SnakeGame from './images/portfolio/snake-game.png';
 import Todo from './images/portfolio/todo-app.png';
 import RPSGame from './images/portfolio/rps-game.png';
 import ShaunShines from './images/portfolio/shaun-shines-next.png';
+import Dashboard from './images/portfolio/python-dashboard';
 import Project from './Project';
 import Filter from './Filter';
 
@@ -124,7 +125,7 @@ const Portfolio = () => {
       title: `Population Dashboard`,
       hoverTitle: `Python Hvplot Dashboard`,
       description: ` `,
-      image: RPSGame,
+      image: Dashboard,
       projectLink: ``,
       tags: ['all', 'python'],
     },
