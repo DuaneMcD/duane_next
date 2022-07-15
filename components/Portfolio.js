@@ -11,6 +11,7 @@ import Todo from './images/portfolio/todo-app.png';
 import RPSGame from './images/portfolio/rps-game.png';
 import ShaunShines from './images/portfolio/shaun-shines-next.png';
 import Dashboard from './images/portfolio/python-dashboard.png';
+import Storefront from './images/portfolio/storefront-WIP.png';
 import Project from './Project';
 import Filter from './Filter';
 
@@ -116,7 +117,7 @@ const Portfolio = () => {
       title: `Storefront E-commerce`,
       hoverTitle: `A fully hosted Web Store`,
       description: `Built on Next.js and directus (CMS), this project enables a scalable online presence. Directus uses SQL to store objects and data.`,
-      image: RPSGame,
+      image: Storefront,
       projectLink: ``,
       tags: ['all', 'next.js', 'sql'],
     },
