@@ -118,7 +118,7 @@ const Portfolio = () => {
       hoverTitle: `A fully hosted Web Store`,
       description: `Built on Next.js and directus (CMS), this project enables a scalable online presence. Directus uses SQL to store objects and data.`,
       image: Storefront,
-      projectLink: ``,
+      projectLink: `https://github.com/DuaneMcD/storefront`,
       tags: ['all', 'next.js', 'sql'],
     },
     {
@@ -127,7 +127,7 @@ const Portfolio = () => {
       hoverTitle: `Python Hvplot Dashboard`,
       description: ` `,
       image: Dashboard,
-      projectLink: ``,
+      projectLink: `https://github.com/DuaneMcD/Population-Dashboard`,
       tags: ['all', 'python'],
     },
   ];
