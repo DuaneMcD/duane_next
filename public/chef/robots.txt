@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /chef/
+
+Sitemap: https://duanemcdonald.com/chef/sitemap.xml
