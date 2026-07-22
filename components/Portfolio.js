@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 import { motion } from 'framer-motion';
 
 import Chirpr from './images/portfolio/chirpr.png';
@@ -19,7 +19,7 @@ const Portfolio = () => {
   const [galleryFilter, setGalleryFilter] = useState('all');
   const [displayedProjects, setDisplayedProjects] = useState([]);
 
-  const projects = [
+  const projects = useMemo(() => [
     {
       id: 1,
       title: `Twitter Clone`,
@@ -128,7 +128,7 @@ const Portfolio = () => {
       description: ` `,
       image: Dashboard,
     },
-  ];
+  ], []);
   return (
     <section id='portfolio' className={'portfolio'}>
       <div className={'container'}>

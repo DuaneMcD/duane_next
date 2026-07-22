@@ -15,7 +15,7 @@ const Filter = ({
       project.tags.includes(galleryFilter)
     );
     setDisplayedProjects(filtered);
-  }, [galleryFilter]);
+  }, [galleryFilter, projects, setDisplayedProjects]);
 
   return (
     <nav id='filter' className={'col-md-12'}>
