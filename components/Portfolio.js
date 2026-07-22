@@ -127,8 +127,6 @@ const Portfolio = () => {
       hoverTitle: `Python Hvplot Dashboard`,
       description: ` `,
       image: Dashboard,
-      projectLink: `https://population-hvplot-dashboard.herokuapp.com/dashboard`,
-      tags: ['all', 'python'],
     },
   ];
   return (
