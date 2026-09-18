@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import styles from '../../styles/houselander.module.css';
+import styles from '../styles/houselander.module.css';
 
 const photos = [
   ['/houselander/living-room.jpg', 'Sunlit living room'],
