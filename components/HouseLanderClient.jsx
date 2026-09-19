@@ -1,6 +1,7 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import Image from 'next/image';
+import { useState } from 'react';
 import styles from '../styles/houselander.module.css';
 
 const photos = [
@@ -10,6 +11,17 @@ const photos = [
   ['/houselander/pool.jpg', 'Private pool'],
   ['/houselander/bathroom.jpg', 'Spa-like bath'],
 ];
+
+function getUtm() {
+  if (typeof window === 'undefined') return {};
+
+  const p = new URLSearchParams(window.location.search);
+  return Object.fromEntries(
+    ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content']
+      .filter(k => p.get(k))
+      .map(k => [k, p.get(k)]),
+  );
+}
 
 function today() {
   return new Date().toISOString().slice(0, 10);
@@ -27,17 +39,7 @@ export default function HouseLanderClient() {
   });
   const [startedAt] = useState(() => Date.now());
   const [status, setStatus] = useState({ type: 'idle', message: '' });
-  const [utm, setUtm] = useState({});
-  useEffect(() => {
-    const p = new URLSearchParams(window.location.search);
-    setUtm(
-      Object.fromEntries(
-        ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content']
-          .filter(k => p.get(k))
-          .map(k => [k, p.get(k)]),
-      ),
-    );
-  }, []);
+  const [utm] = useState(getUtm);
   const set = e => setForm({ ...form, [e.target.name]: e.target.value });
   const submit = async e => {
     e.preventDefault();
@@ -129,20 +131,34 @@ export default function HouseLanderClient() {
           <h2>Come for the view. Stay for the feeling.</h2>
         </div>
         <div className={styles.carousel}>
-          <img src={photos[index][0]} alt={photos[index][1]} />
+          <Image
+            src={photos[index][0]}
+            alt={photos[index][1]}
+            fill
+            sizes='(max-width: 768px) 100vw, 60vw'
+            quality={85}
+            className={styles.carouselImage}
+          />
+
           <button
+            type='button'
+            className={`${styles.carouselButton} ${styles.previousButton}`}
             aria-label='Previous photo'
             onClick={() =>
               setIndex((index + photos.length - 1) % photos.length)
             }>
-            ←
+            <span aria-hidden='true'>‹</span>
           </button>
+
           <button
+            type='button'
+            className={`${styles.carouselButton} ${styles.nextButton}`}
             aria-label='Next photo'
             onClick={() => setIndex((index + 1) % photos.length)}>
-            →
+            <span aria-hidden='true'>›</span>
           </button>
-          <p>
+
+          <p className={styles.carouselCaption}>
             {photos[index][1]} · {index + 1} / {photos.length}
           </p>
         </div>
@@ -158,7 +174,7 @@ export default function HouseLanderClient() {
         </div>
         <form className={styles.form} onSubmit={submit} noValidate>
           <label>
-            Your name
+            <span>Your name</span>
             <input
               name='name'
               value={form.name}
@@ -168,7 +184,7 @@ export default function HouseLanderClient() {
             />
           </label>
           <label>
-            Email
+            <span>Email</span>
             <input
               type='email'
               name='email'
@@ -179,7 +195,7 @@ export default function HouseLanderClient() {
             />
           </label>
           <label>
-            Phone
+            <span>Phone</span>
             <input
               type='tel'
               name='phone'
@@ -191,7 +207,7 @@ export default function HouseLanderClient() {
           </label>
           <div className={styles.dateRow}>
             <label>
-              Arrival
+              <span>Preferred Arrival</span>
               <input
                 type='date'
                 name='arrival'
@@ -202,7 +218,7 @@ export default function HouseLanderClient() {
               />
             </label>
             <label>
-              Departure
+              <span>Preferred Departure</span>
               <input
                 type='date'
                 name='departure'
@@ -214,7 +230,7 @@ export default function HouseLanderClient() {
             </label>
           </div>
           <label className={styles.honeypot} aria-hidden='true'>
-            Website
+            <span>Website</span>
             <input
               name='website'
               tabIndex={-1}
@@ -241,12 +257,9 @@ export default function HouseLanderClient() {
           </small>
         </form>
       </section>
-      <footer>
+      <footer className={styles.footer}>
         PRIVATE OUTER BANKS RETREAT <span>·</span> A SLOWER KIND OF LUXURY
       </footer>
-      <a className={styles.mobileCta} href='#dates'>
-        See Available Dates →
-      </a>
     </main>
   );
 }

@@ -7,7 +7,7 @@
 
 .lander {
   --ink: #18343a;
-  --sand: #eedbc0;
+  --sand: rgb(241, 218, 186);
 
   min-height: 100vh;
   background: #faf8f4;
@@ -30,19 +30,19 @@
 }
 
 .lander p {
-  color: inherit;
   font-size: 1rem;
 }
 
 .lander h1,
 .lander h2,
 .lander h3 {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Montserrat', serif;
   font-weight: 500;
   line-height: 1.05;
 }
 
 .hero {
+  color: white;
   position: relative;
   display: grid;
   min-height: 88vh;
@@ -58,10 +58,20 @@
 
 .heroContent {
   position: relative;
+  inset: 0;
   max-width: 760px;
   padding: clamp(2rem, 7vw, 7rem);
   padding-bottom: 10vh;
-  color: white;
+  color: rgb(255, 255, 255);
+  background:
+    linear-gradient(
+      90deg,
+      rgb(8 29 34 / 58%) 0%,
+      rgb(8 29 34 / 20%) 48%,
+      transparent 78%
+    ),
+    linear-gradient(180deg, transparent 35%, rgb(8 29 34 / 58%) 100%);
+  border-radius: 0.5rem;
 }
 
 .eyebrow {
@@ -73,10 +83,18 @@
   text-transform: uppercase;
 }
 
-.hero h1 {
+.hero p {
   margin: 0.5rem 0 1rem;
   color: white;
-  font-size: clamp(3.5rem, 9vw, 8rem);
+  font-size: clamp(1.2rem, 1.6vw, 1.4rem);
+}
+
+.hero h1 {
+  margin: 0.5rem 0 1rem;
+  color: rgb(240, 238, 238);
+  max-width: 11ch;
+  font-size: clamp(3.25rem, 7vw, 6.75rem);
+  letter-spacing: -0.035em;
 }
 
 .heroContent > p:not(.eyebrow) {
@@ -92,10 +110,10 @@
   gap: 1.4rem;
   border: 0;
   padding: 1rem 1.35rem;
-  background: #d9aa73;
+  background: #f2b166;
   color: #18343a;
   font: inherit;
-  font-weight: 500;
+  font-weight: 700;
   text-decoration: none;
   cursor: pointer;
 }
@@ -154,27 +172,84 @@
   max-width: 28rem;
 }
 
-.carousel {
-  position: relative;
-}
-
 .carousel img {
   display: block;
   width: 100%;
   aspect-ratio: 1.35;
   object-fit: cover;
+  border-radius: 0.5rem;
 }
 
-.carousel button {
+.carousel {
   position: relative;
-  width: 2.5rem;
-  height: 2.5rem;
-  margin-top: 1rem;
-  margin-right: 0.4rem;
-  border: 1px solid var(--ink);
-  background: transparent;
-  color: var(--ink);
+  width: 100%;
+  height: clamp(320px, 60vw, 600px);
+  min-height: 320px;
+  overflow: hidden;
+}
+
+.carouselImage {
+  object-fit: cover;
+  object-position: center;
+}
+
+.carouselButton {
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+  display: grid;
+  width: 3rem;
+  height: 3rem;
+  place-items: center;
+  border: 0px solid rgb(255 255 255 / 45%);
+  border-radius: 999px;
+  background: rgb(24 52 58 / 38%);
+  color: white;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 2.75rem;
+  font-weight: 500;
+  line-height: 0.25;
   cursor: pointer;
+  transform: translateY(-55%);
+  backdrop-filter: blur(2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.105);
+  transition:
+    background 380ms ease,
+    border-color 380ms ease,
+    transform 380ms ease;
+}
+
+.carouselButton:hover {
+  /* border-color: rgb(255 255 255 / 80%); */
+  background: rgba(24, 52, 58, 0.552);
+}
+
+.carouselButton:active {
+  transform: translateY(-50%) scale(0.94);
+}
+
+.previousButton {
+  left: 1.25rem;
+}
+
+.nextButton {
+  right: 1.25rem;
+}
+
+.carouselButton:focus-visible {
+  outline: 2px solid white;
+  outline-offset: 4px;
+}
+
+.carouselCaption {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  left: 1rem;
+  color: white !important;
+  font-size: 0.75rem !important;
+  text-align: center;
+  text-shadow: 0 1px 4px rgb(0 0 0 / 70%);
 }
 
 .carousel p {
@@ -222,6 +297,34 @@
   gap: 1rem;
 }
 
+.button:focus-visible,
+.carouselButton:focus-visible {
+  outline: 3px solid #d9aa73;
+  outline-offset: 3px;
+}
+
+.form label {
+  display: block;
+  color: var(--ink);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.form input {
+  border-radius: 0;
+  transition:
+    border-color 160ms ease,
+    box-shadow 160ms ease;
+}
+
+.form input:focus {
+  outline: none;
+  border-color: var(--ink);
+  box-shadow: 0 0 0 3px rgb(24 52 58 / 12%);
+}
+
 .form small {
   line-height: 1.5;
 }
@@ -251,10 +354,6 @@
   letter-spacing: 0.14em;
 }
 
-.mobileCta {
-  display: none;
-}
-
 @media (max-width: 760px) {
   .hero {
     min-height: 78vh;
@@ -277,20 +376,6 @@
   .galleryCopy,
   .formSection > div {
     margin-bottom: 3rem;
-  }
-
-  .mobileCta {
-    position: fixed;
-    right: 1rem;
-    bottom: 1rem;
-    left: 1rem;
-    z-index: 2;
-    display: block;
-    padding: 1rem;
-    background: #d9aa73;
-    color: var(--ink);
-    text-align: center;
-    text-decoration: none;
   }
 
   .lander {
